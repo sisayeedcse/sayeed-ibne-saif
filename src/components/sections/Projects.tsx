@@ -15,7 +15,7 @@ export default function Projects() {
             index="04"
             label="Projects"
             heading="What I've built."
-            subheading="Real projects across web, mobile and software. Cloud and infrastructure projects are in progress — they'll appear here as they're completed."
+            subheading="A selection of my recent web development work, including client e-commerce platforms, organizational websites, and custom web applications."
           />
         </FadeIn>
         <ProjectsFilter />

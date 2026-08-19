@@ -9,6 +9,7 @@ export type Project = {
   status: ProjectStatus;
   description: string;
   tech: string[];
+  image?: string;
   links?: {
     github?: string;
     live?: string;
@@ -19,75 +20,62 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    id: "classtrack",
-    title: "ClassTrack",
-    subtitle: "Academic Schedule Management App",
-    category: "mobile",
+    id: "glowbee",
+    title: "Glowbee Skincare",
+    subtitle: "E-Commerce Website Development",
+    category: "web",
     status: "completed",
     description:
-      "Android application for organizing and managing student academic schedules, with PDF and Excel import support for timetables.",
-    tech: ["Kotlin", "Jetpack Compose", "Firebase", "Room Database", "PDF Parsing", "Excel Parsing"],
+      "A complete e-commerce platform developed for a client using WordPress. Features full product management, responsive design, and an optimized shopping experience.",
+    tech: ["WordPress", "WooCommerce", "PHP", "MySQL", "CSS", "JavaScript"],
+    image: "/projects/glowbee.png",
     links: {
-      github: "#", // Replace with actual repo URL
+      live: "https://glowbeeskincare.com",
     },
     highlight: true,
   },
   {
-    id: "ecommerce-dev",
-    title: "E-Commerce Website Development",
-    subtitle: "Client Web Projects",
+    id: "ieeepusb",
+    title: "IEEE PU SB Org Website",
+    subtitle: "Frontend Design & Development",
     category: "web",
     status: "completed",
     description:
-      "Full-cycle development and maintenance of client-oriented e-commerce websites, covering product management, SEO, and performance.",
-    tech: ["WordPress", "WooCommerce", "PHP", "MySQL", "HTML", "CSS", "JavaScript"],
-    links: {},
-  },
-  {
-    id: "portfolio",
-    title: "Personal Portfolio",
-    subtitle: "This Website",
-    category: "web",
-    status: "completed",
-    description:
-      "Responsive personal portfolio built with Next.js and Tailwind CSS, designed for performance, accessibility and SEO.",
-    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Motion"],
+      "Designed and developed the frontend of the official organizational website for IEEE Premier University Student Branch as the Additional Webmaster for the 2025 session.",
+    tech: ["HTML", "Tailwind CSS", "JavaScript", "Frontend Design"],
+    image: "/projects/ieeepusb.png",
     links: {
-      github: "#", // Replace with actual repo URL
+      live: "https://ieeepusb.org",
     },
   },
-  // ── Coming Next ────────────────────────────────────────────────
-  // These will be populated as projects are completed.
   {
-    id: "linux-server-lab",
-    title: "Linux Server Lab",
-    subtitle: "Systems & Administration",
-    category: "coming-next",
-    status: "planned",
+    id: "gadgetexa",
+    title: "Gadgetexa Labs",
+    subtitle: "Personal Web Tools & Tech Blog",
+    category: "web",
+    status: "completed",
     description:
-      "Hands-on Linux server setup, user management, SSH configuration, systemd services and shell scripting exercises.",
-    tech: ["Linux", "Ubuntu", "Bash", "SSH", "systemd"],
+      "A personal project offering online utility tools for PC users and sharing new technology blogs. Developed from scratch using the Laravel framework.",
+    tech: ["Laravel", "PHP", "Tailwind CSS", "MySQL", "Web Tools"],
+    image: "/projects/gadgetexa.png",
+    links: {
+      live: "https://labs.gadgetexa.com",
+    },
   },
   {
-    id: "cloud-fundamentals-project",
-    title: "Cloud Fundamentals Project",
-    subtitle: "AWS / Azure / GCP",
-    category: "coming-next",
-    status: "planned",
+    id: "amazing-laundry",
+    title: "Amazing Laundry System",
+    subtitle: "Custom POS & Management Dashboard",
+    category: "software",
+    status: "completed",
     description:
-      "Practical cloud deployment project covering compute, storage, networking and IAM fundamentals.",
-    tech: ["Cloud", "Networking", "IAM", "Storage"],
-  },
-  {
-    id: "network-lab",
-    title: "Network Configuration Lab",
-    subtitle: "Networking & Infrastructure",
-    category: "coming-next",
-    status: "planned",
-    description:
-      "Packet Tracer / GNS3 network topology lab covering routing, switching, VLANs and basic security.",
-    tech: ["Cisco", "TCP/IP", "Routing", "VLANs", "Network Security"],
-  },
+      "A complete laundry management system and POS dashboard built for a client based in Qatar. Features order tracking, customer management, and financial reporting.",
+    tech: ["Laravel", "PHP", "Tailwind CSS", "MySQL", "POS System"],
+    image: "/projects/amazinglaundry.png",
+    links: {
+      live: "https://amazinglaundryapp.com/",
+    },
+  }
 ];
 
 export const projectCategories = [
