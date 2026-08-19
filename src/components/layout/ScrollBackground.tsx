@@ -45,8 +45,9 @@ export default function ScrollBackground() {
         style={{ 
           backgroundImage: "url('/photo2.jpg')",
           backgroundPosition: "top center",
-          backgroundSize: "cover",
+          backgroundSize: "100% auto",
           backgroundRepeat: "no-repeat",
+          backgroundColor: "#0A0D12",
           transform: `scale(${scale})`,
           filter: `grayscale(${grayscale}%) brightness(${brightness}%)`,
           transition: "transform 0.15s ease-out, filter 0.15s ease-out"
@@ -59,9 +60,10 @@ export default function ScrollBackground() {
         className="fixed inset-0 -z-50 hidden md:block will-change-transform"
         style={{ 
           backgroundImage: "url('/bg-desktop.jpg')",
-          backgroundPosition: "center",
-          backgroundSize: "cover",
+          backgroundPosition: "center top",
+          backgroundSize: "100% auto", // Use 100% width to prevent extreme zooming on very tall/wide screens
           backgroundRepeat: "no-repeat",
+          backgroundColor: "#0A0D12",
           transform: `scale(${scale})`,
           filter: `grayscale(${grayscale}%) brightness(${brightness}%)`,
           transition: "transform 0.15s ease-out, filter 0.15s ease-out"

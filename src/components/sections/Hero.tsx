@@ -71,19 +71,21 @@ export default function Hero() {
         aria-hidden="true"
       />
 
-      {/* ── Layer 3: Watermark name ── */}
+      {/* ── Layer 3: Watermark name (Hidden on mobile) ── */}
       <div
-        className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden select-none"
+        className="hidden md:flex absolute inset-0 items-center justify-center pointer-events-none overflow-hidden select-none"
         aria-hidden="true"
       >
         <span
-          className="font-black text-blue-500 whitespace-nowrap"
+          className="font-black whitespace-nowrap"
           style={{
             fontSize: "clamp(96px, 20vw, 320px)",
-            opacity: 0.04,
-            letterSpacing: "-0.04em",
+            color: "transparent",
+            WebkitTextStroke: "1.5px rgba(255, 255, 255, 0.2)",
+            letterSpacing: "-0.01em",
             lineHeight: 1,
             transform: "translateY(5%)",
+            opacity: 1,
           }}
         >
           SAYEED
