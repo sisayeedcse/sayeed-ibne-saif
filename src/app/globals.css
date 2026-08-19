@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+/* ─────────────────────────────────────────────
+   Design tokens — Tailwind v4 @theme block
+   ───────────────────────────────────────────── */
+@theme {
+  /* Background scale */
+  --color-canvas:   #0A0D12;
+  --color-surface:  #10141B;
+  --color-elevated: #141922;
+  --color-border:   #252B35;
+  --color-border-subtle: #1C2230;
+
+  /* Type scale — reference next/font CSS vars at runtime */
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-mono: var(--font-jbmono), "Courier New", monospace;
+}
+
+/* ─────────────────────────────────────────────
+   Base reset & defaults
+   ───────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--color-canvas);
+  color: #F3F4F6;
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  min-height: 100dvh;
+}
+
+/* ─────────────────────────────────────────────
+   Focus visible — keyboard nav accessibility
+   ───────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid #3B82F6;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ─────────────────────────────────────────────
+   Subtle dot-grid background texture for hero
+   ───────────────────────────────────────────── */
+.bg-dot-grid {
+  background-image: radial-gradient(circle, #252B35 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* ─────────────────────────────────────────────
+   Section dividers
+   ───────────────────────────────────────────── */
+.section-divider {
+  border-top: 1px solid var(--color-border);
+}
+
+/* ─────────────────────────────────────────────
+   Monospace label style (technical metadata)
+   ───────────────────────────────────────────── */
+.mono-label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #6B7280;
+}
+
+/* ─────────────────────────────────────────────
+   HeroGraph node pulse animation
+   ───────────────────────────────────────────── */
+@keyframes node-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.6; }
+}
+
+@keyframes ring-pulse {
+  0%   { transform: scale(1);   opacity: 0.5; }
+  100% { transform: scale(1.9); opacity: 0; }
+}
+
+@keyframes dash-flow {
+  to { stroke-dashoffset: -24; }
+}
+
+.node-pulse {
+  animation: node-pulse 3s ease-in-out infinite;
+}
+
+.ring-pulse {
+  animation: ring-pulse 2.5s ease-out infinite;
+}
+
+.line-flow {
+  animation: dash-flow 2s linear infinite;
+}
+
+/* ─────────────────────────────────────────────
+   Rotating text circle (Hero right panel)
+   ───────────────────────────────────────────── */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.rotate-circle {
+  animation: spin-slow 20s linear infinite;
+  transform-origin: center;
+}
+
+/* ─────────────────────────────────────────────
+   Photo background utilities
+   ───────────────────────────────────────────── */
+
+/* Hero full-section photo: set background-image via inline style.
+   Falls back gracefully to canvas color if /public/photo.jpg absent. */
+.hero-photo-bg {
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+/* ID-card photo area */
+.id-card-photo {
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-color: var(--color-surface);
+}
+
+/* ─────────────────────────────────────────────
+   ID Badge pendulum swing (damped oscillation)
+   ───────────────────────────────────────────── */
+@keyframes badge-swing {
+  0%    { transform: rotate(0deg); }
+  8%    { transform: rotate(14deg); }
+  22%   { transform: rotate(-11deg); }
+  36%   { transform: rotate(8deg); }
+  50%   { transform: rotate(-5.5deg); }
+  63%   { transform: rotate(3.5deg); }
+  74%   { transform: rotate(-2deg); }
+  84%   { transform: rotate(1deg); }
+  92%   { transform: rotate(-0.5deg); }
+  100%  { transform: rotate(0deg); }
+}
+
+/* ─────────────────────────────────────────────
+   Reduced motion — respect user preference
+   ───────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html { scroll-behavior: auto; }
+}
