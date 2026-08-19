@@ -15,29 +15,6 @@ This project is built using modern web technologies:
 - **Icons:** [Lucide React](https://lucide.dev/)
 - **Language:** [TypeScript](https://www.typescriptlang.org/)
 
-## 🛠️ Getting Started
-
-First, clone the repository and navigate into it:
-
-```bash
-git clone https://github.com/sisayeedcse/sayeed-ibne-saif.git
-cd sayeed-ibne-saif
-```
-
-Install the dependencies:
-
-```bash
-npm install
-```
-
-Run the development server:
-
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
 ## 📁 Project Structure
 
 The project is structured with a modular architecture:
