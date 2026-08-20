@@ -14,5 +14,5 @@ export const profile = {
     linkedin: "https://www.linkedin.com/in/sisayeedofficial/",
     github: "https://github.com/sisayeedcse",
   },
-  resume: "/Sayeed_Ibne_Saif_Resume.pdf",
+  resume: "https://drive.google.com/file/d/1ggWVib3PFIYytDi2yUrnP2tg2rseXQlS/view?usp=sharing",
 } as const;

@@ -17,7 +17,6 @@ function CertCard({
   onClick: () => void;
 }) {
   const [imgError, setImgError] = useState(false);
-  const [imgLoaded, setImgLoaded] = useState(false);
 
   return (
     <FadeIn direction="up" delay={index * 60}>
@@ -28,22 +27,15 @@ function CertCard({
       >
         {/* ── Thumbnail area ── */}
         <div className="relative aspect-[4/3] bg-surface overflow-hidden">
-          {/* Skeleton loader */}
-          {!imgLoaded && !imgError && (
-            <div className="absolute inset-0 bg-surface animate-pulse" aria-hidden="true" />
-          )}
-
           {/* Certificate image */}
           {!imgError ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img
               src={cert.image}
               alt={cert.name}
-              className={`w-full h-full object-cover object-center transition-all duration-300 group-hover:scale-[1.04] ${
-                imgLoaded ? "opacity-100" : "opacity-0"
-              }`}
-              onLoad={() => setImgLoaded(true)}
+              className="w-full h-full object-cover object-center transition-all duration-300 group-hover:scale-[1.04]"
               onError={() => setImgError(true)}
+              loading="lazy"
             />
           ) : (
             /* Placeholder when image is missing */
@@ -57,7 +49,7 @@ function CertCard({
                 {cert.name}
               </span>
               <span className="font-mono text-[9px] text-gray-700">
-                Drop in /public/certs/
+                Image missing
               </span>
             </div>
           )}
