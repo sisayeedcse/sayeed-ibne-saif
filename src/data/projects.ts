@@ -75,6 +75,20 @@ export const projects: Project[] = [
     links: {
       live: "https://amazinglaundryapp.com/",
     },
+  },
+  {
+    id: "jibika",
+    title: "Jibika",
+    subtitle: "Livelihood & Micro-Capital Web Platform",
+    category: "web",
+    status: "completed",
+    description:
+      "A platform connecting verified livelihood needs with small-scale capital through trust and AI. Supports worker profiles, capital deployment tracking, and asset delivery management.",
+    tech: ["Next.js", "React", "Tailwind CSS", "TypeScript", "AI"],
+    image: "/projects/jibika.png",
+    links: {
+      live: "https://jibika.vercel.app/",
+    },
   }
 ];
 
