@@ -89,9 +89,9 @@ export default function EducationCerts() {
                 Current CGPA
               </span>
               
-              <div className="relative z-10 flex items-baseline gap-1" aria-label="CGPA 3.83 out of 4.00">
+              <div className="relative z-10 flex items-baseline gap-1" aria-label="CGPA 3.79 out of 4.00">
                 <span className="text-7xl sm:text-[84px] font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-400 tracking-tighter leading-none">
-                  3.83
+                  3.79
                 </span>
                 <span className="text-2xl sm:text-3xl font-bold text-gray-600">
                   /4.00
