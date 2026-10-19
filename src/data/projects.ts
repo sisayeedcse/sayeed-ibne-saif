@@ -89,6 +89,17 @@ export const projects: Project[] = [
     links: {
       live: "https://jibika.vercel.app/",
     },
+  },
+  {
+    id: "inex-tracker",
+    title: "InEx Tracker",
+    subtitle: "Personal Finance & Expense Manager",
+    category: "software",
+    status: "completed",
+    description:
+      "A personal income and expense tracker built with Laravel to manage finances across multiple accounts (bKash, Upay, Payoneer). Features a real-time dashboard with 6-month income vs. expense charts, transaction history, account balances, and monthly cost estimation.",
+    tech: ["Laravel", "PHP", "MySQL", "Tailwind CSS", "Chart.js"],
+    image: "/projects/inex-tracker.png",
   }
 ];
 
