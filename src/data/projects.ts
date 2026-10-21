@@ -100,6 +100,21 @@ export const projects: Project[] = [
       "A personal income and expense tracker built with Laravel to manage finances across multiple accounts (bKash, Upay, Payoneer). Features a real-time dashboard with 6-month income vs. expense charts, transaction history, account balances, and monthly cost estimation.",
     tech: ["Laravel", "PHP", "MySQL", "Tailwind CSS", "Chart.js"],
     image: "/projects/inex-tracker.png",
+  },
+  {
+    id: "smartcool",
+    title: "SmartCool",
+    subtitle: "AI-Powered AC Energy Simulation Platform",
+    category: "software",
+    status: "completed",
+    description:
+      "A simulation-only research dashboard for smart air-conditioning energy management. Tracks real-time temperature, humidity, AC power, and energy savings. Features an Energy Performance panel comparing baseline vs. SmartCool energy consumption, net savings, estimated bill savings, and a System Status monitor with simulation engine health.",
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"],
+    image: "/projects/smartcool.png",
+    links: {
+      live: "https://smartcool.vercel.app/",
+      github: "https://github.com/sisayeedcse/SmartCool",
+    },
   }
 ];
 
