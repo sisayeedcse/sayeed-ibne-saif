@@ -104,11 +104,11 @@ export const projects: Project[] = [
   {
     id: "smartcool",
     title: "SmartCool",
-    subtitle: "AI-Powered AC Energy Simulation Platform",
+    subtitle: "Multi-Room AC Energy-Efficiency Suite",
     category: "software",
     status: "completed",
     description:
-      "A simulation-only research dashboard for smart air-conditioning energy management. Tracks real-time temperature, humidity, AC power, and energy savings. Features an Energy Performance panel comparing baseline vs. SmartCool energy consumption, net savings, estimated bill savings, and a System Status monitor with simulation engine health.",
+      "A smart multi-room air-conditioning energy management platform. Features live room monitoring, occupancy and motion detection, automated AC controls, real-time power and cost savings tracking, and cumulative CO2e emission analytics.",
     tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"],
     image: "/projects/smartcool.png",
     links: {
