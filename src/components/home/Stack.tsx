@@ -17,7 +17,7 @@ export default function Stack() {
         <ChipGrid className="absolute right-0 -top-12 sm:-top-10 xl:-top-4 w-[120px] sm:w-[150px] xl:w-[220px] h-auto pointer-events-none select-none opacity-40 sm:opacity-50 xl:opacity-100" />
         <FadeIn>
           <SectionHeader
-            index="05"
+            index="06"
             eyebrow="Stack"
             heading="What I work with."
             subheading="Counted honestly — the cloud and systems track is mid-build, and the categories below say exactly that."

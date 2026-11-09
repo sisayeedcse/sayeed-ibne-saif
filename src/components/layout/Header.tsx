@@ -44,20 +44,28 @@ export default function Header() {
       )}
     >
       <div className="max-w-[1180px] mx-auto px-5 sm:px-8 h-16 flex items-center justify-between gap-6">
-        {/* Wordmark — SAYEED° */}
+        {/* Logo lockup — navy monogram plate + SAYEED wordmark */}
         <Link
           href="/"
-          className="group shrink-0 flex items-start gap-0.5 leading-none"
+          className="group shrink-0 flex items-center gap-2.5"
           aria-label="Sayeed Ibne Saif — home"
         >
-          <span className="font-sans text-[1.2rem] font-extrabold tracking-tight text-ink group-hover:text-navy transition-colors">
-            SAYEED
-          </span>
           <span
-            className="font-mono text-[0.65rem] text-navy translate-y-0.5"
+            className="shrink-0 w-8 h-8 rounded-[0.55rem] bg-navy text-paper font-serif text-[17px] font-semibold grid place-items-center leading-none shadow-[0_1px_3px_rgba(31,78,121,0.25)] transition-transform duration-300 group-hover:-rotate-3"
             aria-hidden="true"
           >
-            °
+            S
+          </span>
+          <span className="flex items-start leading-none">
+            <span className="font-sans text-[1.2rem] font-extrabold tracking-tight text-ink group-hover:text-navy transition-colors">
+              SAYEED
+            </span>
+            <span
+              className="font-mono text-[0.65rem] text-navy translate-y-0.5 ml-0.5"
+              aria-hidden="true"
+            >
+              °
+            </span>
           </span>
         </Link>
 

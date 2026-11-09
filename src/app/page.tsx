@@ -3,6 +3,7 @@ import FeaturedWork from "@/components/home/FeaturedWork";
 import Roadmap from "@/components/home/Roadmap";
 import Experience from "@/components/home/Experience";
 import Education from "@/components/home/Education";
+import CredentialsGallery from "@/components/home/CredentialsGallery";
 import Stack from "@/components/home/Stack";
 import ActivitiesPreview from "@/components/home/ActivitiesPreview";
 import Contact from "@/components/home/Contact";
@@ -15,6 +16,7 @@ export default function HomePage() {
       <Roadmap />
       <Experience />
       <Education />
+      <CredentialsGallery />
       <Stack />
       <ActivitiesPreview />
       <Contact />

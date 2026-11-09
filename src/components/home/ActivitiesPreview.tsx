@@ -14,7 +14,7 @@ export default function ActivitiesPreview() {
         <StarNetwork className="absolute right-0 -top-16 sm:-top-12 xl:top-0 w-[104px] sm:w-[128px] xl:w-[220px] h-auto pointer-events-none select-none opacity-40 sm:opacity-50 xl:opacity-100" />
         <FadeIn>
           <SectionHeader
-            index="06"
+            index="07"
             eyebrow="Activities"
             heading="Beyond the coursework."
             subheading="Hackathons, IEEE conferences and student programs — each with its own write-up and photos."

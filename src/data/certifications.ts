@@ -1,8 +1,7 @@
 /**
  * Certifications data.
  *
- * Certificate images live in:  /public/certs/<filename>
- * Network Fundamentals image not yet uploaded — placeholder shown automatically.
+ * Certificate images live in:  public/certs/<filename>  (referenced as /certs/...)
  */
 
 export interface Certification {
@@ -10,6 +9,8 @@ export interface Certification {
   name: string;
   issuer: string;
   date: string;
+  /** Short category badge shown on the credential card */
+  tag: string;
   /** Path relative to /public — must match the actual file in /public/certs/ */
   image: string;
   credentialId?: string;
@@ -22,7 +23,8 @@ export const certifications: Certification[] = [
     name: "Networking Fundamentals",
     issuer: "Akamai Technologies via Coursera",
     date: "May 4, 2025",
-    image: "https://res.cloudinary.com/dknflcbt1/image/upload/v1787241786/network_fundamentals_lmhwno.png",
+    tag: "Networking",
+    image: "/certs/network-fundamentals.png",
     verifyUrl: "https://coursera.org/verify/4VUPOC8415V4",
   },
   {
@@ -30,7 +32,8 @@ export const certifications: Certification[] = [
     name: "Hands-on Introduction to Linux Commands and Shell Scripting",
     issuer: "IBM via Coursera",
     date: "May 10, 2025",
-    image: "https://res.cloudinary.com/dknflcbt1/image/upload/v1787241785/hands_on_linux_ybxzbx.png",
+    tag: "Linux & Shell",
+    image: "/certs/hands-on-linux.png",
     verifyUrl: "https://coursera.org/verify/Y6IZZQ9SL7II",
   },
   {
@@ -38,7 +41,8 @@ export const certifications: Certification[] = [
     name: "Command Line Basics",
     issuer: "Scrimba",
     date: "July 13, 2025",
-    image: "https://res.cloudinary.com/dknflcbt1/image/upload/v1787241794/command_line_basics_lgyeac.png",
+    tag: "Command Line",
+    image: "/certs/command-line-basics.jpg",
     verifyUrl:
       "https://scrimba.com/certificate-cert2fentAFN57J96QJUr8Qwvo1EufJnUADCR3ozZA6nezoXG",
   },
@@ -47,7 +51,8 @@ export const certifications: Certification[] = [
     name: "Learn Python",
     issuer: "Scrimba",
     date: "July 13, 2025",
-    image: "https://res.cloudinary.com/dknflcbt1/image/upload/v1787241820/learn_python_sixsxp.png",
+    tag: "Python",
+    image: "/certs/learn-python.jpg",
     verifyUrl:
       "https://scrimba.com/certificate-cert2uNjgWdv7Rrk2nH8qnXvQnL7dm9BKYadr5F",
   },
@@ -56,13 +61,15 @@ export const certifications: Certification[] = [
     name: "Android App Development with Kotlin",
     issuer: "FutureNation · Creative IT Institute",
     date: "December 8, 2024",
-    image: "https://res.cloudinary.com/dknflcbt1/image/upload/v1787241787/app_development_w6xtiw.png",
+    tag: "Mobile",
+    image: "/certs/app-development-kotlin.png",
   },
   {
     id: "hack-the-code-challenge",
     name: "Hack the Code Challenge — Standard Edition",
     issuer: "Reply · Team QuantumX · Position 164",
     date: "March 12, 2025",
-    image: "https://res.cloudinary.com/dknflcbt1/image/upload/v1787241785/hack_the_code_h6q6lg.png",
+    tag: "Competition",
+    image: "/certs/hack-the-code-challenge.png",
   },
 ];
