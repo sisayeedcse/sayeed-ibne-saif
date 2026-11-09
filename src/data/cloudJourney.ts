@@ -85,9 +85,9 @@ export const cloudJourney: JourneyStep[] = [
 ];
 
 export const journeyStatusConfig: Record<JourneyStatus, { label: string; color: string }> = {
-  completed: { label: "Completed", color: "text-green-400" },
-  learning: { label: "Learning", color: "text-blue-400" },
-  building: { label: "Building", color: "text-cyan-400" },
-  next: { label: "Next", color: "text-amber-400" },
-  planned: { label: "Planned", color: "text-gray-500" },
+  completed: { label: "Done", color: "text-lime" },
+  learning: { label: "Learning", color: "text-info" },
+  building: { label: "Building", color: "text-sage" },
+  next: { label: "Next", color: "text-warn" },
+  planned: { label: "Planned", color: "text-faint" },
 };

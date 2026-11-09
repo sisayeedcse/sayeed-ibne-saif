@@ -1,98 +1,139 @@
 export type Activity = {
-  id: string;
+  slug: string;
   title: string;
   organization: string;
   period?: string;
-  description: string;
+  location?: string;
+  summary: string;
+  detail: string;
+  outcome?: string;
   tags: string[];
-  image?: string;
-  image2?: string;
-  imagePosition?: string;
+  photos?: { src: string; position?: string }[];
   link?: string;
   linkText?: string;
 };
 
 export const activities: Activity[] = [
-  // ── Most Notable / Recent First ──
   {
-    id: "iconeect-2026",
-    title: "Volunteer, IEEE iCONEECT 2026",
+    slug: "iconeect-2026",
+    title: "Volunteer — iCONEECT 2026 & iCONCLAVE 2026",
     organization: "IEEE · Premier University",
     period: "2026",
-    description:
-      "Volunteered at iCONNECT 2026 & iCONCLAVE 2026 — coordinating Physical Sessions 02 & 06 on Day 01, Virtual Session 08, and the iCONCLAVE competitions on Day 02. Gained hands-on experience in research, AI/ML, and emerging technologies.",
-    tags: ["Volunteering", "IEEE", "Research", "AI/ML", "Conference"],
-    image: "/activities/iconeect-team.jpg",
-    image2: "/activities/iconeect-award.png",
-    imagePosition: "center top",
+    summary:
+      "Coordinated physical and virtual sessions and the iCONCLAVE competitions across a two-day national conference.",
+    detail:
+      "Volunteering at the IEEE iCONEECT 2026 & iCONCLAVE 2026 conferences meant owning concrete sessions rather than general support: coordinating Physical Session 02 and 06 on day one, Virtual Session 08, and the iCONCLAVE competitions on day two — keeping speakers, rooms and schedules in sync as the program ran.",
+    outcome:
+      "Hands-on exposure to how research conferences are actually run — sessions management, speaker logistics, and close contact with research work in AI/ML and emerging technologies.",
+    tags: ["Volunteering", "IEEE", "Conference", "AI/ML", "Research"],
+    photos: [
+      { src: "/activities/iconeect-team.jpg", position: "center 62%" },
+      { src: "/activities/iconeect-award.png" },
+    ],
   },
   {
-    id: "ict-fair-runner-up",
-    title: "Runner-up, 3rd Chattogram ICT Fair 2025",
+    slug: "ict-fair-runner-up",
+    title: "Runner-up — 3rd Chattogram ICT Fair 2025",
     organization: "ISPB Chattogram Chapter",
-    period: "Jan 15 - Jan 17, 2025",
-    description:
-      "Secured the runner-up position in the tech competition at the 3rd Chattogram ICT Fair 2025 held at GEC Convention Center. The three-day event featured renowned tech companies, youth-focused seminars, and science exhibits.",
-    tags: ["Competition", "Runner-up", "Tech Fair", "Achievement"],
-    image: "https://res.cloudinary.com/dknflcbt1/image/upload/v1787242550/podiumGEC_aqbfry.jpg",
-    image2: "https://res.cloudinary.com/dknflcbt1/image/upload/v1787242550/PRIZEGECFair_env2e8.jpg",
-    imagePosition: "center 20%",
+    period: "Jan 15–17, 2025",
+    location: "GEC Convention Center, Chattogram",
+    summary:
+      "Runner-up in the tech competition at a three-day regional ICT fair with company booths, seminars and science exhibits.",
+    detail:
+      "The 3rd Chattogram ICT Fair 2025 brought tech companies, youth-focused seminars and science exhibits to GEC Convention Center. Competing in the tech competition against teams from across the region, the team took the runner-up position — judged on working software, problem selection and presentation.",
+    outcome:
+      "Regional runner-up recognition, plus direct contact with the local industry ecosystem the fair convenes.",
+    tags: ["Competition", "Runner-up", "Achievement"],
+    photos: [
+      { src: "/activities/ict-fair-podium.jpg", position: "center 40%" },
+      { src: "/activities/ict-fair-prize.jpg", position: "center 42%" },
+    ],
   },
   {
-    id: "appquest-2025",
-    title: "5th Place, AppQuest 2025 Hackathon",
+    slug: "appquest-2025",
+    title: "5th of 42 teams — AppQuest 2025 Hackathon",
     organization: "AppLink & Banglalink",
     period: "Dec 13, 2025",
-    description:
-      "Secured 5th position among 42 teams with 'MaidMatch', a domestic help management platform aimed at solving real-world problems. The hackathon was held at Banglalink HQ in Dhaka.",
-    tags: ["Hackathon", "Top 5", "Startup", "Tech Innovation"],
-    image: "https://res.cloudinary.com/dknflcbt1/image/upload/v1787243417/applink_hackathon_wklfeh.jpg",
+    location: "Banglalink HQ, Dhaka",
+    summary:
+      "Top-5 finish with 'MaidMatch', a domestic help management platform, among 42 teams.",
+    detail:
+      "AppQuest 2025 drew 42 teams to Banglalink headquarters. Our team built MaidMatch — a platform for managing domestic help engagements with verification and booking flows — and presented it to the judging panel, finishing 5th overall.",
+    outcome:
+      "A top-5 national hackathon result demonstrating how to scope, build and defend a product idea under time pressure.",
+    tags: ["Hackathon", "Top 5", "Startup", "Team"],
+    photos: [
+      { src: "/activities/appquest.jpg", position: "center 30%" },
+    ],
     link: "https://github.com/sisayeedcse/MaidMatch-App",
-    linkText: "View GitHub Repo",
+    linkText: "View GitHub repo",
   },
   {
-    id: "televerse-1-0",
-    title: "Top 30 Finalist, Televerse 1.0 Hackathon",
+    slug: "televerse-1-0",
+    title: "Top 30 Finalist — Televerse 1.0 Hackathon",
     organization: "CUET ETE",
-    description:
-      "Competed in an intense 8-hour hackathon, building and presenting a full microservice-based project. Reached the top 30 finalists from all over Bangladesh, gaining hands-on experience in Docker, CI/CD, and DevOps under pressure.",
+    period: "2025",
+    summary:
+      "Finalist in an 8-hour hackathon building a full microservice-based project — Docker, CI/CD and DevOps under pressure.",
+    detail:
+      "Televerse 1.0, hosted by CUET ETE, gave teams eight hours to build and present a full project. We committed to a microservices architecture rather than a monolith: containerized services, a CI pipeline and a deployment story — precision that put the project in the top 30 from all over Bangladesh.",
+    outcome:
+      "Practical DevOps experience under hackathon pressure — Docker, CI/CD and service decomposition with one shot at correctness.",
     tags: ["Hackathon", "Microservices", "DevOps", "Finalist"],
-    image: "https://res.cloudinary.com/dknflcbt1/image/upload/v1787243508/televerseHackathon_urlxf7.jpg",
+    photos: [
+      { src: "/activities/televerse.jpg", position: "center 28%" },
+    ],
     link: "https://github.com/sisayeedcse/CareForAll_MicroService",
-    linkText: "View GitHub Repo",
-    imagePosition: "center 30%",
+    linkText: "View GitHub repo",
   },
-  // ── IEEE Programs ──
   {
-    id: "ieee-aiml-bootcamp",
-    title: "IEEE AI/ML Bootcamp",
+    slug: "ieee-aiml-bootcamp",
+    title: "Organizer & participant — IEEE AI/ML Bootcamp",
     organization: "IEEE Computer Society · Premier University",
     period: "2025",
-    description:
-      "Participated in and helped organize an intensive AI/ML bootcamp covering foundational to applied machine learning concepts, workshops and project sessions.",
-    tags: ["AI/ML", "Bootcamp", "Organization", "Technical Education"],
-    image: "/activities/bootcamp.png",
-    imagePosition: "95% 30%",
+    summary:
+      "Helped organize and participated in an intensive AI/ML bootcamp — foundations through applied workshops.",
+    detail:
+      "The AI/ML bootcamp ran as a multi-week program covering foundational machine learning through applied workshop and project sessions. Organizing meant curating the syllabus, arranging facilitators and coordinating logistics; participating meant completing the track end to end.",
+    outcome:
+      "Both sides of technical education — building a program and proving the material — for an IEEE-sanctioned bootcamp.",
+    tags: ["AI/ML", "Bootcamp", "Organization", "IEEE"],
+    photos: [{ src: "/activities/bootcamp.png", position: "center 45%" }],
   },
   {
-    id: "ieee-technical-webinars",
-    title: "IEEE Technical Webinars & Workshops",
+    slug: "ieee-webinars-workshops",
+    title: "IEEE technical webinars & workshops",
     organization: "IEEE Computer Society · Premier University",
-    description:
-      "Active participant and organizer for IEEE technical education events covering software development, emerging technologies and industry practices.",
-    tags: ["Webinars", "Workshops", "Technical Programs", "Community"],
-    image: "/activities/webinar.png",
-    imagePosition: "85% center",
+    period: "2025–2026",
+    summary:
+      "Active organizer and participant across IEEE technical-education events for software development and emerging technologies.",
+    detail:
+      "Across the 2025–2026 sessions, the chapter ran a steady calendar of technical webinars and workshops — software development practices, emerging technologies and industry speakers. My involvement covered speaker coordination, announcements and reporting, alongside regular participation.",
+    outcome:
+      "Consistent program-running experience for an IEEE student chapter's technical track.",
+    tags: ["Webinars", "Workshops", "Community", "IEEE"],
+    photos: [{ src: "/activities/webinar.png", position: "center 60%" }],
   },
   {
-    id: "ieee-student-initiatives",
-    title: "Student Technology Initiatives",
+    slug: "student-tech-initiatives",
+    title: "Student technology initiatives",
     organization: "IEEE Computer Society · Premier University",
-    description:
-      "Coordinated student-led technology education programs designed to build technical skills and connect students with professional engineering communities.",
-    tags: ["Leadership", "Collaboration", "Technology Education", "Student Programs"],
-    image: "/activities/workshop.png",
-    imagePosition: "95% 20%",
+    period: "2025–2026",
+    summary:
+      "Coordinated student-led technology education programs building technical skills and community.",
+    detail:
+      "Beyond the official calendar, the chapter coordinated student-led initiatives — peer-taught technical sessions, collaboration with other engineering communities, and programs designed to connect students with professional engineering bodies.",
+    outcome:
+      "A student-community track record that led directly to the 2026 Chairperson role.",
+    tags: ["Leadership", "Collaboration", "Student Programs"],
+    photos: [{ src: "/activities/workshop.png", position: "center 40%" }],
   },
 ];
 
+export function getActivity(slug: string) {
+  return activities.find((a) => a.slug === slug);
+}
+
+export function activityIndex(slug: string) {
+  return activities.findIndex((a) => a.slug === slug);
+}
